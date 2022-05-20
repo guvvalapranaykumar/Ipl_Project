@@ -64,21 +64,17 @@ public void storeData(String[] data) {
     match.setResult(data[8]);
     match.setDl_applied(Integer.parseInt(data[9]));
     match.setWinner(data[10]);
-
     match.setWin_by_runs(Integer.parseInt(data[11]));
-
     match.setWin_by_wickets(Integer.parseInt(data[12]));
-
     match.setPlayer_of_match(data[13]);
-
     match.setVenue(data[14]);
 
     matchesdata.add(match);
 }
 
-    public static void main(String[] args) {
+    public static List<Matches> getMatchesList() {
         MatchList m=new MatchList();
         m.readData();
-        System.out.println(matchesdata);
+        return matchesdata;
     }
 }
